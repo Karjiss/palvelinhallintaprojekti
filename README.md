@@ -120,6 +120,8 @@ Top.sls tiedston sisältö
 
 # Lähteet
 
-https://github.com/AlexLindh/Configuration-management/blob/main/h1-viisikko.md
+Lindh, A. 21.10.2025. h1-viisikko. Luettavissa: https://github.com/AlexLindh/Configuration-management/blob/main/h1-viisikko.md. Luettu 29.11.2025
 
-https://github.com/AlexLindh/Configuration-management/blob/main/h5-toimiva-versio.md
+Lindh, A. 20.11.2025. h5 toimiva versio. Luettavissa: https://github.com/AlexLindh/Configuration-management/blob/main/h5-toimiva-versio.md. Luettu 29.11.2025
+
+Lindh, A. 15.10.2025. h4 - pkg-file-service. Luettavissa: https://github.com/AlexLindh/Configuration-management/blob/main/h4-pkg-file-service.md. Luettu 30.11.2025
