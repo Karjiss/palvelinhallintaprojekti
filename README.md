@@ -46,8 +46,9 @@ packages:
   pkg.installed:
     - pkgs:
       - wget
+      - nmap
       - tree
-      - cowsay 
+      - cowsay
 ```      
 
 Tää on ehdotus muotoilu ^^^^
@@ -194,8 +195,9 @@ Sitten siirryimme master-koneelle ja ajoimme komennon: ```$ sudo salt-key -A```,
 
 <img width="306" height="104" alt="image" src="https://github.com/user-attachments/assets/0a74b391-0c4e-4593-bb6d-bc2e57d41b49" />
 
+Ajettiin tilat masterilta komennolla: ```$ sudo salt '*' state.apply```.
 
-
+<img width="543" height="607" alt="image" src="https://github.com/user-attachments/assets/9005ac65-01d7-4ed6-84d9-20eca842508f" />
 
 
 
