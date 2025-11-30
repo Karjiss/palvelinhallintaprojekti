@@ -198,7 +198,7 @@ Ajoimme top-filen:
 
 ## Haavoittuva Apache2-palvelin
 
-### Käyttöympäristö
+### Käyttöympäristö 
 
 - Käyttöjärjestelmä: Microsoft Windows 10 Home
 - Emolevy: Gigabyte Z170-Gaming K3
@@ -207,6 +207,8 @@ Ajoimme top-filen:
 - RAM: 16 GB DDR4
 - Virtualisointiohjelmisto: **VMWare Workstation Pro**
 - Virtuaalikoneet: **Debian 13 Trixie** ja **Kali Linux**
+Suosittelemme käyttämään Kali Linuxia, jos haluat kokeilla hyökkäystyökaluja, sillä niiden asennus esim. Debianille on paljon monimutkaisempaa.
+
 
 Tässä osiossa oli tarkoitus ajaa Saltilla aikaisemmat tilat masterilta (Kali) slavelle (Debian).
 
