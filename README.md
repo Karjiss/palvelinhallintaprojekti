@@ -163,12 +163,16 @@ ufw-package:
     - name: ufw
 ufw-allow-http:
   cmd.run:
-    - name: 'sudo ufw allow 80/tcp'
-    - unless: 'sudo ufw status | grep "80/tcp"'
+    - name: 'ufw allow 80/tcp'
+    - unless: 'ufw status | grep -E "80/tcp|WWW"'
+    - require:
+      - service: ufw-enable
 ufw-enable:
-  cmd.run:
-    - name: 'ufw --force enable'
-    - name: 'ufw status | grep -i "active"'
+  service.running:
+    - name: ufw
+    - enable: True
+    - require:
+      - pkg: ufw-package
 show-ufw-status:
   cmd.run:
     - name: 'sudo ufw status'
@@ -189,9 +193,9 @@ base:
 
 Ajoimme top-filen:
 
-<img width="766" height="810" alt="kuva" src="https://github.com/user-attachments/assets/6fff8214-5126-41a9-96d0-bfbf1455ced9" />
+<img width="505" height="498" alt="image" src="https://github.com/user-attachments/assets/357408d6-4ed9-4254-9c41-5ed5579cd192" />
 
-- Ei erroreita, 5 muutosta.
+- Ei erroreita, 2 muutosta.
 - Tila: ```cmd.run``` ei periaatteessa tee muutoksia, prosessien ID muuttuu vain joka ajokerralla.
 
 
