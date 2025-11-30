@@ -155,8 +155,8 @@ Saltin asennuksen jälkeen asetimme Kalin Debianin masteriksi muokkaamalla ```/e
 
 <img width="609" height="406" alt="image" src="https://github.com/user-attachments/assets/7bcfd994-b589-42eb-b76b-ed21c5078068" />
 
-- Lisätty rivi = master: (master-koneen IP-osoite=
-- Vapaaehtoinen Lisätty rivi = id: (Nimi, millä master-kone näkee slaven)
+- Lisätty rivi = master: (Master-IP)
+- Vapaaehtoinen Lisätty rivi = id: (Slavekone-ID)
   
 Tässä vaiheessa käynnistettiin salt-minion uudelleen komennolla: ```$ sudo systemctl stop salt-minion``` ja ```$ sudo systemctl start salt-minion```.
 
