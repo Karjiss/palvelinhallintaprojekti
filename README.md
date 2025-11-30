@@ -40,7 +40,7 @@ Loin uuden hakemiston saltille komennolla:
 
 Ja loin seuraavanlaisen koodinsisällön:
 
-[**init.sls**](https://github.com/Karjiss/palvelinhallintaprojekti/blob/main/srv/salt/packages/init.sls) :
+[**init.sls**](https://github.com/Karjiss/palvelinhallintaprojekti/blob/main/srv/salt/packages/init.sls)
 ```
 packages:
   pkg.installed:
@@ -158,7 +158,7 @@ Lisätään vanhaan init.sls-tiedostoon tiedot uudesta weppisivusta, jotta autom
 
 Muokataan init.sls komennolla: ```$ sudoedit /srv/salt/apache2/init.sls```.
 
-[**init.sls**](https://github.com/Karjiss/palvelinhallintaprojekti/blob/main/srv/salt/apache2/init.sls) :
+[**init.sls**](https://github.com/Karjiss/palvelinhallintaprojekti/blob/main/srv/salt/apache2/init.sls)
 
 
 ```
