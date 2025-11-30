@@ -40,6 +40,7 @@ Loin uuden hakemiston saltille komennolla:
 
 Ja loin seuraavanlaisen koodinsisällön:
 
+[**init.sls**](https://github.com/Karjiss/palvelinhallintaprojekti/blob/main/srv/salt/packages/init.sls) :
 ```
 packages:
   pkg.installed:
@@ -149,13 +150,35 @@ Top.sls tiedston sisältö
 
 Tässä osiossa oli tarkoitus ajaa Saltilla aikaisemmat tilat masterilta (Kali) slavelle (Debian).
 
-Tätä varten loimme myös tekoälyn (Gemini) avulla haavoittuvan verkkosivun, johon voisi hyökätä Kalilla tai selaimella. Lisäsimme sen Apache2 tilaan seuraavanlaisesti:
+Tätä varten loimme myös tekoälyn (Gemini) avulla haavoittuvan verkkosivun, johon voisi hyökätä Kalilla tai selaimella. Lisäsimme sen Apache2-tilaan seuraavanlaisesti:
 
 Komennolla: ```$ sudo nano /srv/salt/apache2/vulnerable.php``` lisätään tekstieditorilla tiedosto, jonka sisälle syötetään [vulnerable.php](https://github.com/Karjiss/palvelinhallintaprojekti/blob/main/srv/salt/apache2/vulnerable.php)-tiedoston HTML-koodi.
 
+Lisätään vanhaan init.sls-tiedostoon tiedot uudesta weppisivusta, jotta automatisoidaan tämäkin osuus:
+
+Muokataan init.sls komennolla: ```$ sudoedit /srv/salt/apache2/init.sls```.
+
+[**init.sls**](https://github.com/Karjiss/palvelinhallintaprojekti/blob/main/srv/salt/apache2/init.sls) :
+
+
+```
+apache2:
+  pkg.installed
+/var/www/html/index.html:
+  file.managed:
+    - source: "salt://apache2/index.html"
+/var/www/html/vulnerable.php:
+  file.managed:
+    - source: "salt://apache2/vulnerable.php"
+apache2.service:
+  service.running:
+    - watch:
+      - file: /var/www/html/index.html
+      - file: /var/www/html/vulnerable.php
+```
+
 Tuloksena pitäisi olla haavoittuva apache2 weppisivu, jota voi hyödyntää vaikka Kalin työkalujen kokeilemiseen turvallisesti.
 
-// Ohjeet Saltin asennukseen löytyvät raporteistamme. TEE ALKUUN SE TUTORIAALI JNEJNE LÄHDEVIITTAUS JNEJNE...
 
 
 Saltin asennuksen jälkeen asetimme Kalin Debianin masteriksi muokkaamalla ```/etc/salt/minion```-tiedostoa komennolla: ```$ sudo nano /etc/salt/minion```.  
