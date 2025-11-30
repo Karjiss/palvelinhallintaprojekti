@@ -199,8 +199,11 @@ Ajettiin tilat masterilta komennolla: ```$ sudo salt '*' state.apply```.
 
 <img width="543" height="607" alt="image" src="https://github.com/user-attachments/assets/9005ac65-01d7-4ed6-84d9-20eca842508f" />
 
+- Error viittasi nmap-ohjelman puuttumiseen. Korjaus tehty /packages/init.sls tiedostoon.
 
+<img width="543" height="606" alt="image" src="https://github.com/user-attachments/assets/64520281-a998-4170-b636-524d093c113f" />
 
+- Korjauksen jälkeen ajo suoriutui ilman virheitä, joten vika ei ollut iso. Korjattu myös raportin alkuosasta, sekä git-varaston tiedostosta.
 
 # Lähteet
 
