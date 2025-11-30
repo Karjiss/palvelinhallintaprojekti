@@ -1,4 +1,4 @@
-<img width="544" height="609" alt="image" src="https://github.com/user-attachments/assets/e7dda836-85b5-431a-b24a-f35d3e9031e3" /># h6 - HAP (Haavoittuva Automatisoitu Palvelin) - Miniprojekti
+# h6 - HAP (Haavoittuva Automatisoitu Palvelin) - Miniprojekti
 
 Raportin ja projektin luojat: Alex Lindh & Jani Karjalainen
 
