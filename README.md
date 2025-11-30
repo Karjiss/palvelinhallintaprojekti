@@ -1,4 +1,4 @@
-# h6 - Miniprojekti
+# h6 - Haavoittuva automatisoitu palvelin - Miniprojekti
 
 Raportin ja projektin luojat: Alex Lindh & Jani Karjalainen
 
@@ -12,9 +12,10 @@ Miniprojekti palvelinten hallinnan kurssille.
 
 ## Alkutilanne
 
-Projektin ideana oli luoda SaltStackkia käyttäen automaattinen tila, missä asennetaan verkkopalvelin, tehdään sinne muutoksia ja tarkistellaan verkkokäyttäytymistä.
+Projektin ideana oli luoda SaltStackillä automaattinen tila, mikä asentaa verkkopalvelimen ja tekee siihen muutoksia. Halusimme myös luoda erillisen verkkopalvelimen, joka on tarkoituksella haavoittuva.
 
-Loimme verkkopalvelimelle myös haavoittuvan sivun tekoälyn avulla. Haavoittuvuuksia pystyi hyödyntämään Kali Linuxilla sen sisäänrakennetuilla työkaluilla.
+Loimme verkkopalvelimelle haavoittuvan sivun tekoälyn avulla. Haavoittuvuuksia pystyy hyödyntämään esimerkiksi Kali Linuxilla sen sisäänrakennetuilla työkaluilla. 
+
 
 Projektin alkupisteessä asensimme SaltStackin ja loimme uuden repositorion projektillemme näiden ohjeidein mukaisesti: [**h1-Viisikko**](https://github.com/AlexLindh/Configuration-management/blob/main/h1-viisikko.md) (Lindh 2025).
 
@@ -35,7 +36,7 @@ Loimme testisivun "/var/www/html/index.html", jonka muokattua testasin verkkosiv
 
 ## Muiden pakettien asentaminen
 
-### [Saltin asennusohjeet](https://github.com/Karjiss/server-management-course/blob/main/h1-viisikko.md#b-saltin-asennus-linuxille-salt-minion) (Karjalainen 2025a)
+### [Saltin asennusohjeet](https://github.com/Karjiss/server-management-course/blob/main/h1-viisikko.md#b-saltin-asennus-linuxille-salt-minion) (Karjalainen 26.10.2025)
 
 Seuraavaksi aloitimme pakettien asentamisen käyttäen saltstackkia säästääksemme aikaa.
 
@@ -96,8 +97,15 @@ Seuraavaksi sen tallentaminen raporttiin:
 
 Tässä automatisoimme kaiken edellä käydyn SaltStackin avulla.
 
-Aloitimme luomalla top.sls tiedoston, koska tilojen kirjoittaminen yksitellen on tylsää ja ajanvievää. 
-- [Ohje top-filen luontiin](https://github.com/Karjiss/server-management-course/blob/main/h2-infraa-koodina.md#b-topping) (Karjalainen 2025b)
+Aloitimme luomalla top.sls tiedoston, koska tilojen kirjoittaminen yksitellen on tylsää ja ajanvievää: 
+
+    
+    $ sudoedit srv/salt/top.sls
+
+- [Ohje top-filen luontiin](https://github.com/Karjiss/server-management-course/blob/main/h2-infraa-koodina.md#b-topping) (Karjalainen 02.11.2025)
+
+
+
 
 Seuraavaksi loimme hakemiston apachelle, jotta sen voisi automatisoida:
 
@@ -277,10 +285,13 @@ Lindh, A. 20.11.2025. h5 toimiva versio. Luettavissa: https://github.com/AlexLin
 
 Lindh, A. 15.10.2025. h4 - pkg-file-service. Luettavissa: https://github.com/AlexLindh/Configuration-management/blob/main/h4-pkg-file-service.md. Luettu 30.11.2025
 
-Google Gemini. 29.11.2025. Käytetty luomaan pohja/testi verkkosivu, johon pystyy kohdistamaan Kali Linuxilla hyökkäyksiä. Generoi myös kokeiltavia komentoja, millä hyökätä.
+Google Gemini. 29.11.2025. Käytetty luomaan pohja/testi verkkosivu, johon pystyy kohdistamaan Kali Linuxilla hyökkäyksiä. Generoi myös kokeiltavia komentoja, millä hyökätä. Käytettävissä: https://gemini.google.com/
+
 Promptit: 
 
 <img width="432" height="73" alt="image" src="https://github.com/user-attachments/assets/87f515b9-44fc-47e5-b4ed-76e7167f29b1" />    <img width="481" height="74" alt="image" src="https://github.com/user-attachments/assets/2f356f5a-36c2-4c1a-a1bb-9c08dce52936" />    
 
 
 Karjalainen, J. 26.10.2025. h1-viisikko. Luettavissa: https://github.com/Karjiss/server-management-course/blob/main/h1-viisikko.md. Luettu 30.11.2025.
+
+Karjalainen, J. 2.11.2025. h2-infraa-koodina. Luettavissa: https://github.com/Karjiss/server-management-course/blob/main/h2-infraa-koodina.md#b-topping. Luettu 30.11.2025.
