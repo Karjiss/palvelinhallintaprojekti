@@ -149,7 +149,7 @@ portscan:
 - Skannaus toimii, sekä toimittaa "raportin" haluttuun kansioon.
 - Tämä ei ole idempotentti ratkaisu, sillä se kirjoittaa aina vanhan päälle, muutoksista riippumatta.
 
-Seuraavaksi asennettiin tulimuuri saltin avulla, joka käynnistää ja avaa HTTP portin:
+Seuraavaksi loimme tilan, joka asentaa palomuurin, käynnistää sen ja avaa HTTP portin:
 
     $ sudoedit /srv/salt/firewall/init.sls
 
@@ -174,7 +174,7 @@ show-ufw-status:
     - name: 'sudo ufw status'
 ```
 
-Lisäsimme kaikki hakemistot/ajettavat tilat top.sls tiedostoomme, jotta kaikki tilat ajetaan samalla.
+Lisäsimme kaikki hakemistot/ajettavat tilat top.sls tiedostoomme, jotta kaikki tilat voidaan ajaa kerralla.
 
 [**top.sls**](https://github.com/Karjiss/palvelinhallintaprojekti/blob/main/srv/salt/top.sls)
 
@@ -187,7 +187,7 @@ base:
     - portscan
 ```
 
-Ajoimme top-filen, jotta voimme kokeilla kaikkea kerralla:
+Ajoimme top-filen:
 
 <img width="766" height="810" alt="kuva" src="https://github.com/user-attachments/assets/6fff8214-5126-41a9-96d0-bfbf1455ced9" />
 
