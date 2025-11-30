@@ -4,15 +4,19 @@ Raportin ja projektin luojat: Alex Lindh & Jani Karjalainen
 
 Miniprojekti palvelinten hallinnan kurssille.
 
+### Käyttöympäristö
+
+- Virtualisointiohjelmistot: **VMWare Workstation Pro** ja **Oracle VirtualBox**
+- Virtuaalikoneet: **Debian 13 Trixie** ja **Kali Linux**
+
 
 ## Alkutilanne
 
 Projektin ideana oli luoda SaltStackkia käyttäen automaattinen tila, missä asennetaan verkkopalvelin, tehdään sinne muutoksia ja tarkistellaan verkkokäyttäytymistä.
 
-Loimme verkkopalvelimelle haavoittuvan sivun tekoälyn avulla. Haavoittuvuuksia pystyi hyödyntämään Kali Linuxilla sen sisäänrakennetuilla työkaluilla.
+Loimme verkkopalvelimelle myös haavoittuvan sivun tekoälyn avulla. Haavoittuvuuksia pystyi hyödyntämään Kali Linuxilla sen sisäänrakennetuilla työkaluilla.
 
-
-Projektin alkupisteessä asensimme SaltStackin ja loimme uuden repositorion projektillemme näiden ohjeidein mukaisesti: https://github.com/AlexLindh/Configuration-management/blob/main/h1-viisikko.md.
+Projektin alkupisteessä asensimme SaltStackin ja loimme uuden repositorion projektillemme näiden ohjeidein mukaisesti: [**h1-Viisikko**](https://github.com/AlexLindh/Configuration-management/blob/main/h1-viisikko.md) (Lindh 2025).
 
 ## Verkkopalvelimen asennus
 
@@ -22,7 +26,7 @@ Aloitimme verkkopalvelimen asentamisen ensin käsin.
 
     $ sudo apt-get install apache2
 
-Loin testisivun "/var/www/html/index.html", jonka muokattua testasin verkkosivujen toiminnan:
+Loimme testisivun "/var/www/html/index.html", jonka muokattua testasin verkkosivujen toiminnan:
 
 <img width="1194" height="469" alt="kuva" src="https://github.com/user-attachments/assets/5a16bbf3-9e63-48ab-a917-bf986eaea158" />
 
