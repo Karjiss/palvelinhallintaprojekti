@@ -2,13 +2,17 @@
 
 Raportin ja projektin luojat: Alex Lindh & Jani Karjalainen
 
-Miniprojekti palvelinten hallinta-kurssille.
+Miniprojekti palvelinten hallinnan kurssille.
+
 
 ## Alkutilanne
 
 Projektin ideana oli luoda SaltStackkia käyttäen automaattinen tila, missä asennetaan verkkopalvelin, tehdään sinne muutoksia ja tarkistellaan verkkokäyttäytymistä.
 
-Projektin alkupisteessä asensimme saltstackin ja loimme uuden repositorion projektillemme (ohjeiden mukaisesti!)
+Loimme verkkopalvelimelle haavoittuvan sivun tekoälyn avulla. Haavoittuvuuksia pystyi hyödyntämään Kali Linuxilla sen sisäänrakennetuilla työkaluilla.
+
+
+Projektin alkupisteessä asensimme SaltStackin ja loimme uuden repositorion projektillemme (ohjeiden mukaisesti!).
 
 ## Verkkopalvelimen asennus
 
@@ -23,6 +27,7 @@ Loin testisivun "/var/www/html/index.html", jonka muokattua testasin verkkosivuj
 <img width="1194" height="469" alt="kuva" src="https://github.com/user-attachments/assets/5a16bbf3-9e63-48ab-a917-bf986eaea158" />
 Toimii!
 
+
 ## Muiden pakettien asentaminen
 
 Seuraavaksi aloitin pakettien asentamisen käyttäen saltstackkia säästääkseni aikaa.
@@ -35,6 +40,17 @@ Loin uuden hakemiston saltille komennolla:
 
 Ja loin seuraavanlaisen koodinsisällön:
 
+```
+packages:
+  pkg.installed:
+    - pkgs:
+      - wget
+      - tree
+      - cowsay 
+```      
+
+Tää on ehdotus muotoilu ^^^^
+
 <img width="444" height="144" alt="kuva" src="https://github.com/user-attachments/assets/486a6931-5b84-4279-aa49-74be44c7a4f8" />
 
 Asennettavan paketit!
@@ -44,7 +60,7 @@ Asennettavan paketit!
 Kaikki toimii!
 
 
-## porttiskannaus
+## Porttiskannaus
 
 Seuraavana aloitimme porttiskannauksen ja siitä raportin saamisen.
 
@@ -67,7 +83,7 @@ Seuraavaksi sen tallentaminen raporttiin
 Tallennettu raportti!
 
 
-## Automatisointi käyttäen saltstackkia
+## Automatisointi käyttäen SaltStackia
 
 Seuraavaksi aloitimme kaiken tämän automatisoinnin saltstackin avulla!
 
@@ -78,6 +94,8 @@ Seuraavaksi loin hakemiston apachelle, jotta sen voisi automatisoida.
     '$ sudoedit /srv/salt/apache2/init.sls'
 
 Ja kopioin aiemmin luodun /var/www/html/index.html tiedoston myös tähän hakemistoon /srv/salt/apache2
+
+
 
 <img width="412" height="189" alt="kuva" src="https://github.com/user-attachments/assets/ae25fdcb-8f3f-47ce-906d-550ee2d3e93e" />
 
@@ -116,6 +134,46 @@ Samalla olin lisännyt kaikki hakemistot/ajettavat tilat top.sls tiedostoonl, jo
 <img width="835" height="162" alt="kuva" src="https://github.com/user-attachments/assets/e9958991-545d-4da6-a909-9b3573c5095a" />
 
 Top.sls tiedston sisältö
+
+## Haavoittuva Apache2-palvelin
+
+### Käyttöympäristö
+
+- Käyttöjärjestelmä: Microsoft Windows 10 Home
+- Emolevy: Gigabyte Z170-Gaming K3
+- Prosessori: Intel i5-6600K
+- Näytönohjain: NVIDIA GeForce RTX 2060
+- RAM: 16 GB DDR4
+- Virtualisointiohjelmisto: **VMWare Workstation Pro**
+- Virtuaalikoneet: **Debian 13 Trixie** ja **Kali Linux**
+
+Tässä osiossa oli tarkoitus ajaa Saltilla aikaisemmat tilat masterilta (Kali) slavelle (Debian).
+
+Tätä varten loimme myös tekoälyn (Gemini) avulla haavoittuvan verkkosivun, johon voisi hyökätä Kalilla tai selaimella. Lisäsimme sen Apache2 tilaan seuraavanlaisesti:
+
+Komennolla: ```$ sudo nano /srv/salt/apache2/vulnerable.php``` lisätään tekstieditorilla tiedosto, jonka sisälle syötetään [vulnerable.php](https://github.com/Karjiss/palvelinhallintaprojekti/blob/main/srv/salt/apache2/vulnerable.php)-tiedoston HTML-koodi.
+
+Tuloksena pitäisi olla haavoittuva apache2 weppisivu, jota voi hyödyntää vaikka Kalin työkalujen kokeilemiseen turvallisesti.
+
+// Ohjeet Saltin asennukseen löytyvät raporteistamme. TEE ALKUUN SE TUTORIAALI JNEJNE LÄHDEVIITTAUS JNEJNE...
+
+
+Saltin asennuksen jälkeen asetimme Kalin Debianin masteriksi muokkaamalla ```/etc/salt/minion```-tiedostoa komennolla: ```$ sudo nano /etc/salt/minion```.  
+
+<img width="609" height="406" alt="image" src="https://github.com/user-attachments/assets/7bcfd994-b589-42eb-b76b-ed21c5078068" />
+
+- Lisätty rivi = master: (Master-IP)
+- Vapaaehtoinen Lisätty rivi = id: (Slavekone-ID)
+  
+Tässä vaiheessa käynnistettiin salt-minion uudelleen komennolla: ```$ sudo systemctl stop salt-minion``` ja ```$ sudo systemctl start salt-minion```.
+
+Sitten siirryimme master-koneelle ja ajoimme komennon: ```$ sudo salt-key -A```, jotta voimme hyväksyä "slaven".
+
+<img width="306" height="104" alt="image" src="https://github.com/user-attachments/assets/0a74b391-0c4e-4593-bb6d-bc2e57d41b49" />
+
+
+
+
 
 
 # Lähteet
