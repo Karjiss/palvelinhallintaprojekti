@@ -183,7 +183,7 @@ Tuloksena pitäisi olla haavoittuva apache2 weppisivu, jota voi hyödyntää vai
 
 Saltin asennuksen jälkeen asetimme Kalin Debianin masteriksi muokkaamalla ```/etc/salt/minion```-tiedostoa komennolla: ```$ sudo nano /etc/salt/minion```.  
 
-<img width="609" height="406" alt="image" src="https://github.com/user-attachments/assets/7bcfd994-b589-42eb-b76b-ed21c5078068" />
+<img width="619" height="413" alt="image" src="https://github.com/user-attachments/assets/1c4c5981-56ea-4f39-80cc-39ff96fd61d3" />
 
 - Lisätty rivi = master: (Master-IP)
 - Vapaaehtoisesti lisättävä rivi = id: (Slavekone-ID)
@@ -193,6 +193,7 @@ Tässä vaiheessa käynnistettiin salt-minion uudelleen komennolla: ```$ sudo sy
 Sitten siirryimme master-koneelle ja ajoimme komennon: ```$ sudo salt-key -A```, jotta voimme hyväksyä "slaven".
 
 <img width="306" height="104" alt="image" src="https://github.com/user-attachments/assets/0a74b391-0c4e-4593-bb6d-bc2e57d41b49" />
+
 
 
 
