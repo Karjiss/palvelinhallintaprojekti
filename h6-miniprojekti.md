@@ -1,4 +1,4 @@
-# h6 - HAP (Haavoittuva Automatisoitu Palvelin) - Miniprojekti
+# h6 - Miniprojekti
 
 Raportin ja projektin luojat: Alex Lindh & Jani Karjalainen
 
