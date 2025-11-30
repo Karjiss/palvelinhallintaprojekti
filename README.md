@@ -178,7 +178,7 @@ show-ufw-status:
     - name: 'sudo ufw status'
 ```
 
-Lisäsimme kaikki hakemistot/ajettavat tilat top.sls tiedostoomme, jotta kaikki tilat voidaan ajaa kerralla.
+Lisäsimme kaikki hakemistot/ajettavat tilat top.sls tiedostoomme, jotta kaikki tilat voidaan ajaa kerralla:
 
 [**top.sls**](https://github.com/Karjiss/palvelinhallintaprojekti/blob/main/srv/salt/top.sls)
 
