@@ -2,13 +2,17 @@
 
 Raportin ja projektin luojat: Alex Lindh & Jani Karjalainen
 
-Miniprojekti palvelinten hallinta-kurssille.
+Miniprojekti palvelinten hallinnan kurssille.
+
 
 ## Alkutilanne
 
 Projektin ideana oli luoda SaltStackkia käyttäen automaattinen tila, missä asennetaan verkkopalvelin, tehdään sinne muutoksia ja tarkistellaan verkkokäyttäytymistä.
 
-Projektin alkupisteessä asensimme saltstackin ja loimme uuden repositorion projektillemme (ohjeiden mukaisesti!)
+Loimme verkkopalvelimelle haavoittuvan sivun tekoälyn avulla. Haavoittuvuuksia pystyi hyödyntämään Kali Linuxilla sen sisäänrakennetuilla työkaluilla.
+
+
+Projektin alkupisteessä asensimme SaltStackin ja loimme uuden repositorion projektillemme (ohjeiden mukaisesti!).
 
 ## Verkkopalvelimen asennus
 
@@ -44,7 +48,7 @@ Asennettavan paketit!
 Kaikki toimii!
 
 
-## porttiskannaus
+## Porttiskannaus
 
 Seuraavana aloitimme porttiskannauksen ja siitä raportin saamisen.
 
@@ -67,7 +71,7 @@ Seuraavaksi sen tallentaminen raporttiin
 Tallennettu raportti!
 
 
-## Automatisointi käyttäen saltstackkia
+## Automatisointi käyttäen SaltStackia
 
 Seuraavaksi aloitimme kaiken tämän automatisoinnin saltstackin avulla!
 
