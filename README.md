@@ -12,7 +12,7 @@ Projektin ideana oli luoda SaltStackkia käyttäen automaattinen tila, missä as
 Loimme verkkopalvelimelle haavoittuvan sivun tekoälyn avulla. Haavoittuvuuksia pystyi hyödyntämään Kali Linuxilla sen sisäänrakennetuilla työkaluilla.
 
 
-Projektin alkupisteessä asensimme SaltStackin ja loimme uuden repositorion projektillemme (ohjeiden mukaisesti!).
+Projektin alkupisteessä asensimme SaltStackin ja loimme uuden repositorion projektillemme näiden ohjeidein mukaisesti: https://github.com/AlexLindh/Configuration-management/blob/main/h1-viisikko.md.
 
 ## Verkkopalvelimen asennus
 
