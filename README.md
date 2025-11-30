@@ -132,6 +132,42 @@ Samalla olin lisännyt kaikki hakemistot/ajettavat tilat top.sls tiedostoonl, jo
 
 Top.sls tiedston sisältö
 
+## Haavoittuva Apache2-palvelin
+
+### Käyttöympäristö
+
+- Käyttöjärjestelmä: Microsoft Windows 10 Home
+- Emolevy: Gigabyte Z170-Gaming K3
+- Prosessori: Intel i5-6600K
+- Näytönohjain: NVIDIA GeForce RTX 2060
+- RAM: 16 GB DDR4
+- Virtualisointiohjelmisto: **VMWare Workstation Pro**
+- Virtuaalikoneet: **Debian 13 Trixie** ja **Kali Linux**
+
+Tässä osiossa oli tarkoitus ajaa Saltilla aikaisemmat tilat masterilta (Kali) slavelle (Debian).
+
+Tuloksena pitäisi olla haavoittuva verkkosivu, jota voi hyödyntää vaikka Kalin työkalujen kokeilemiseen.
+
+Ohjeet Saltin asennukseen löytyvät raporteistamme. TEE ALKUUN SE TUTORIAALI JNEJNE LÄHDEVIITTAUS JNEJNE...
+
+
+Saltin asennuksen jälkeen asetimme Kalin Debianin masteriksi muokkaamalla ```/etc/salt/minion```-tiedostoa komennolla: ```$ sudo nano /etc/salt/minion```.  
+
+<img width="609" height="406" alt="image" src="https://github.com/user-attachments/assets/7bcfd994-b589-42eb-b76b-ed21c5078068" />
+
+- Lisätty rivi = master: (master-koneen IP-osoite=
+- Vapaaehtoinen Lisätty rivi = id: (Nimi, millä master-kone näkee slaven)
+  
+Tässä vaiheessa käynnistettiin salt-minion uudelleen komennolla: ```$ sudo systemctl stop salt-minion``` ja ```$ sudo systemctl start salt-minion```.
+
+Sitten siirryimme master-koneelle ja ajoimme komennon: ```$ sudo salt-key -A```, jotta voimme hyväksyä "slaven".
+
+<img width="306" height="104" alt="image" src="https://github.com/user-attachments/assets/0a74b391-0c4e-4593-bb6d-bc2e57d41b49" />
+
+
+
+
+
 
 # Lähteet
 
