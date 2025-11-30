@@ -10,4 +10,4 @@ apache2.service:
   service.running:
     - watch:
       - file: /var/www/html/index.html
-      - file: /var/www/html/index.html
+      - file: /var/www/html/vulnerable.php
