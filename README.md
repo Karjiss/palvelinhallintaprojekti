@@ -1,4 +1,4 @@
-# palvelinhallintaprojekti
+# h6 - Miniprojekti
 
 Raportin ja projektin luojat: Alex Lindh & Jani Karjalainen
 
@@ -223,3 +223,14 @@ Lindh, A. 21.10.2025. h1-viisikko. Luettavissa: https://github.com/AlexLindh/Con
 Lindh, A. 20.11.2025. h5 toimiva versio. Luettavissa: https://github.com/AlexLindh/Configuration-management/blob/main/h5-toimiva-versio.md. Luettu 29.11.2025
 
 Lindh, A. 15.10.2025. h4 - pkg-file-service. Luettavissa: https://github.com/AlexLindh/Configuration-management/blob/main/h4-pkg-file-service.md. Luettu 30.11.2025
+
+Google Gemini. 29.11.2025. Käytetty luomaan pohja/testi verkkosivu, johon pystyy kohdistamaan Kali Linuxilla hyökkäyksiä. Generoi myös kokeiltavia komentoja, millä hyökätä.
+Promptit: 
+
+<img width="432" height="73" alt="image" src="https://github.com/user-attachments/assets/87f515b9-44fc-47e5-b4ed-76e7167f29b1" />    <img width="481" height="74" alt="image" src="https://github.com/user-attachments/assets/2f356f5a-36c2-4c1a-a1bb-9c08dce52936" />    
+
+Vastaus:
+
+<img width="789" height="701" alt="image" src="https://github.com/user-attachments/assets/6664d3c6-c34a-4ccb-94d3-bfc0777eadcb" />
+
+Karjalainen, J. 26.10.2025. h1-viisikko. Luettavissa: https://github.com/Karjiss/server-management-course/blob/main/h1-viisikko.md. Luettu 30.11.2025.
