@@ -27,6 +27,7 @@ Loin testisivun "/var/www/html/index.html", jonka muokattua testasin verkkosivuj
 <img width="1194" height="469" alt="kuva" src="https://github.com/user-attachments/assets/5a16bbf3-9e63-48ab-a917-bf986eaea158" />
 Toimii!
 
+
 ## Muiden pakettien asentaminen
 
 Seuraavaksi aloitin pakettien asentamisen käyttäen saltstackkia säästääkseni aikaa.
@@ -94,6 +95,8 @@ Seuraavaksi loin hakemiston apachelle, jotta sen voisi automatisoida.
 
 Ja kopioin aiemmin luodun /var/www/html/index.html tiedoston myös tähän hakemistoon /srv/salt/apache2
 
+
+
 <img width="412" height="189" alt="kuva" src="https://github.com/user-attachments/assets/ae25fdcb-8f3f-47ce-906d-550ee2d3e93e" />
 
 /srv/salt/apache2/init.sls -tiedoston koodi
@@ -146,9 +149,13 @@ Top.sls tiedston sisältö
 
 Tässä osiossa oli tarkoitus ajaa Saltilla aikaisemmat tilat masterilta (Kali) slavelle (Debian).
 
-Tuloksena pitäisi olla haavoittuva verkkosivu, jota voi hyödyntää vaikka Kalin työkalujen kokeilemiseen.
+Tätä varten loimme myös tekoälyn (Gemini) avulla haavoittuvan verkkosivun, johon voisi hyökätä Kalilla tai selaimella. Lisäsimme sen Apache2 tilaan seuraavanlaisesti:
 
-Ohjeet Saltin asennukseen löytyvät raporteistamme. TEE ALKUUN SE TUTORIAALI JNEJNE LÄHDEVIITTAUS JNEJNE...
+Komennolla: ```$ sudo nano /srv/salt/apache2/vulnerable.php``` lisätään tekstieditorilla tiedosto, jonka sisälle syötetään [vulnerable.php](https://github.com/Karjiss/palvelinhallintaprojekti/blob/main/srv/salt/apache2/vulnerable.php)-tiedoston HTML-koodi.
+
+Tuloksena pitäisi olla haavoittuva apache2 weppisivu, jota voi hyödyntää vaikka Kalin työkalujen kokeilemiseen turvallisesti.
+
+// Ohjeet Saltin asennukseen löytyvät raporteistamme. TEE ALKUUN SE TUTORIAALI JNEJNE LÄHDEVIITTAUS JNEJNE...
 
 
 Saltin asennuksen jälkeen asetimme Kalin Debianin masteriksi muokkaamalla ```/etc/salt/minion```-tiedostoa komennolla: ```$ sudo nano /etc/salt/minion```.  
