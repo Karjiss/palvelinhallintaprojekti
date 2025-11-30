@@ -1,4 +1,4 @@
-# h6 - HAP (Haavoittuva Automatisoitu Palvelin) - Miniprojekti
+<img width="544" height="609" alt="image" src="https://github.com/user-attachments/assets/e7dda836-85b5-431a-b24a-f35d3e9031e3" /># h6 - HAP (Haavoittuva Automatisoitu Palvelin) - Miniprojekti
 
 Raportin ja projektin luojat: Alex Lindh & Jani Karjalainen
 
@@ -270,7 +270,7 @@ Ajettiin tilat masterilta komennolla:
 
 - Error viittasi nmap-ohjelman puuttumiseen. Korjaus tehty /packages/init.sls tiedostoon.
 
-<img width="543" height="606" alt="image" src="https://github.com/user-attachments/assets/64520281-a998-4170-b636-524d093c113f" />
+<img width="544" height="609" alt="image" src="https://github.com/user-attachments/assets/472a067f-bbd2-40a7-824a-870ab2c2673b" />
 
 - Korjauksen jälkeen uudelleenajo suoriutui ilman virheitä, joten vika ei ollut iso. Korjattu myös raportin alkuosasta, sekä git-varaston tiedostosta.
 
