@@ -203,7 +203,16 @@ Ajettiin tilat masterilta komennolla: ```$ sudo salt '*' state.apply```.
 
 <img width="543" height="606" alt="image" src="https://github.com/user-attachments/assets/64520281-a998-4170-b636-524d093c113f" />
 
-- Korjauksen jälkeen ajo suoriutui ilman virheitä, joten vika ei ollut iso. Korjattu myös raportin alkuosasta, sekä git-varaston tiedostosta.
+- Korjauksen jälkeen uudelleenajo suoriutui ilman virheitä, joten vika ei ollut iso. Korjattu myös raportin alkuosasta, sekä git-varaston tiedostosta.
+
+  **Tulos:**
+
+  <img width="955" height="489" alt="image" src="https://github.com/user-attachments/assets/80750629-11e6-4c5d-873c-d18d7f1bd1c1" />
+
+  - Nmap ajon raportti tallentui oikeaan paikkaan.
+  - Cowsay asentui oikein.
+  - Haavoittuva testisivu on pystyssä paikallisesti.
+  - Virtuaalikone on nyt valmis Kali Linuxin rääkättäväksi.
 
 # Lähteet
 
