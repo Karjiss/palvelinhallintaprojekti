@@ -30,6 +30,8 @@ Toimii!
 
 ## Muiden pakettien asentaminen
 
+### [Saltin asennusohjeet](https://github.com/Karjiss/server-management-course/blob/main/h1-viisikko.md#b-saltin-asennus-linuxille-salt-minion) (Karjalainen 2025)
+
 Seuraavaksi aloitin pakettien asentamisen käyttäen saltstackkia säästääkseni aikaa.
 
 Loin uuden hakemiston saltille komennolla:
