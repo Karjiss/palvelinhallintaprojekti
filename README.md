@@ -39,6 +39,17 @@ Loin uuden hakemiston saltille komennolla:
 
 Ja loin seuraavanlaisen koodinsisällön:
 
+```
+packages:
+  pkg.installed:
+    - pkgs:
+      - wget
+      - tree
+      - cowsay 
+```      
+
+Tää on ehdotus muotoilu ^^^^
+
 <img width="444" height="144" alt="kuva" src="https://github.com/user-attachments/assets/486a6931-5b84-4279-aa49-74be44c7a4f8" />
 
 Asennettavan paketit!
