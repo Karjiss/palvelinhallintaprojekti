@@ -36,7 +36,7 @@ Loimme testisivun "/var/www/html/index.html", jonka muokattua testasin verkkosiv
 
 ## Muiden pakettien asentaminen
 
-### [Saltin asennusohjeet](https://github.com/Karjiss/server-management-course/blob/main/h1-viisikko.md#b-saltin-asennus-linuxille-salt-minion) (Karjalainen 26.10.2025)
+Tästä löytyy vielä toiset [Saltin asennusohjeet](https://github.com/Karjiss/server-management-course/blob/main/h1-viisikko.md#b-saltin-asennus-linuxille-salt-minion)(Karjalainen 26.10.2025), mikäli et jaksa scrollata ylös asti.
 
 Seuraavaksi aloitimme pakettien asentamisen käyttäen saltstackkia säästääksemme aikaa.
 
@@ -200,7 +200,7 @@ Ajoimme top-filen:
 
 
 
-## Haavoittuva Apache2-palvelin
+## Haavoittuva Apache2-palvelin --- Projektin etusivun Readme/asennusohje on lyhennetty versio tästä + tehty enemmän automaattisesti
 
 ### Käyttöympäristö 
 
