@@ -4,6 +4,8 @@ Raportin ja projektin luojat: Alex Lindh & Jani Karjalainen
 
 Miniprojekti palvelinten hallinnan kurssille.
 
+Projekti repo: https://github.com/Karjiss/palvelinhallintaprojekti
+
 ### Käyttöympäristö
 
 - Virtualisointiohjelmistot: **VMWare Workstation Pro** ja **Oracle VirtualBox**
