@@ -5,5 +5,4 @@ packages:
       - nmap
       - tree
       - cowsay
-      - php
-      - libapache2-mod-php
+    
