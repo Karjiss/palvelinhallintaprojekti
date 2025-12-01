@@ -11,9 +11,6 @@ apache2:
     - source: "salt://apache2/static_vulnerable.html"
 /var/www/html/secret:
   file.directory:
-    - user: root
-    - group: root
-    - mode: 755
     - makedirs: True
 /var/www/html/secret/passwrds.txt:
   file.managed:
