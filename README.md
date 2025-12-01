@@ -9,7 +9,7 @@ Loimme verkkopalvelimelle haavoittuvan sivun tekoälyn avulla. Haavoittuvuuksia 
 ### [Saltin asennusohjeet](https://github.com/Karjiss/server-management-course/blob/main/h1-viisikko.md#b-saltin-asennus-linuxille-salt-minion) (Karjalainen 2025) tai [**Saltin asennus Linuxille**](https://github.com/AlexLindh/Configuration-management/blob/main/h1-viisikko.md) (Lindh 2025)
 
 ### Virtuaalikoneet
-- Virtualisointiohjelmisto: **VMWare Workstation Pro**
+- Virtualisointiohjelmisto: **VMWare Workstation Pro** ja **Oracle VirtualBox**
 - Virtuaalikoneet: **Debian 13 Trixie**(slave) ja **Kali Linux** (master)
 
 Suosittelemme käyttämään Kali Linuxia, jos haluat kokeilla hyökkäystyökaluja, sillä niiden asennus esim. Debianille on paljon monimutkaisempaa (Kalissa valmiina paljon).
