@@ -6,3 +6,4 @@ packages:
       - tree
       - cowsay
       - php
+      - libapache2-mod-php
