@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <title>Staattinen Haavoittuva Demo</title>
+</head>
+<body>
+
+    <h1>Puhtaasti HTML-pohjaiset Haavoittuvuudet</h1>
+    
+    <h2>1. DOM-pohjainen XSS</h2>
+    <p>Tämä JavaScript-koodi lukee suoraan URL-osoitteen fragmentin (osa `#`-merkin jälkeen) ja lisää sen HTML-sivulle ilman puhdistusta. Tämä on puhtaasti asiakaspuolen haavoittuvuus.</p>
+    
+    <div style="border: 1px solid #ccc; padding: 15px;">
+        <p>URL-syöte tulostetaan tähän: <span id="syote_alue"></span></p>
+    </div>
+
+    <script>
+        // TAHALLAAN EPÄTURVALLINEN: Ottaa URL-hashin ja injektoi sen suoraan HTML:ään
+        // (document.location.hash sisältää osan #-merkin jälkeen)
+        var user_input = document.location.hash.substring(1);
+        document.getElementById("syote_alue").innerHTML = user_input;
+    </script>
+    
+    <hr>
+    
+    <h2>2. Clickjacking (Konfiguraatiohaavoittuvuus)</h2>
+    <p>Tämä sivu on haavoittuva Clickjackingille, koska Apache ei todennäköisesti lähetä **X-Frame-Options** -turvaotsaketta HTML-tiedostoille oletuksena.</p>
+    
+    <hr>
+
+    <h2>3. Hakemistojen Selaaminen (Tiedot vuotavat)</h2>
+    <p>Tämä riippuu suoraan Apache-asetuksesta. Jos Options Indexes on päällä, kaikki tiedostot vuotavat.</p>
+
+</body>
+</html>
