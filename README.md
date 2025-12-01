@@ -21,7 +21,13 @@ Saltin asennuksen jälkeen asetetaan Kali Debianin masteriksi muokkaamalla ```/e
 - Lisää rivi = master: (masterin_ip_osoite)
 - Vapaaehtoisesti lisättävä rivi = id: (Slavekoneen-nimi)
   
-Tässä vaiheessa käynnistetään salt-minion uudelleen komennoilla: ```$ sudo systemctl stop salt-minion``` ja ```$ sudo systemctl start salt-minion```.
+Tässä vaiheessa käynnistetään salt-minion uudelleen komennoilla: 
+    
+    $ sudo systemctl stop salt-minion
+
+ja
+
+    $ sudo systemctl start salt-minion
 
 Sitten siirrytään master-koneelle ja ajetaan komento: ```$ sudo salt-key -A```, jotta voidaan hyväksyä "slave".
 
