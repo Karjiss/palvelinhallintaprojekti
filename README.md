@@ -1,4 +1,5 @@
 # HAP - Haavoittuva Automatisoitu Palvelin
+
 Projektin ideana oli luoda SaltStackillä automaattinen tila, mikä asentaa verkkopalvelimen ja tekee siihen muutoksia. Halusimme myös luoda erillisen verkkopalvelimen, joka on tarkoituksellisesti haavoittuva.
 
 Loimme verkkopalvelimelle haavoittuvan sivun tekoälyn avulla. Haavoittuvuuksia pystyy hyödyntämään esimerkiksi Kali Linuxilla sen sisäänrakennetuilla työkaluilla.
@@ -32,17 +33,16 @@ Aloitetaan kloonaamalla tämä Git-varasto komennolla:
 
     $ git clone https://github.com/Karjiss/palvelinhallintaprojekti.git
 
-Seuraavaksi kopioidaan Salt-hakemisto omaan ```/srv/salt``` hakemistoon:
+Seuraavaksi kopioi Salt-hakemisto omaan ```/srv/salt``` hakemistoon:
 
     $ sudo cp -r ~/palvelinhallintaprojekti/srv/salt/* /srv/salt/
 
-Ajettiin tilat masterilta komennolla: 
+Aja tilat masterilta komennolla: 
 
     $ sudo salt '*' state.apply
 
-<img width="544" height="609" alt="image" src="https://github.com/user-attachments/assets/472a067f-bbd2-40a7-824a-870ab2c2673b" />
+<img width="510" height="564" alt="image" src="https://github.com/user-attachments/assets/984a496a-c5e0-400d-8132-2b11d23006a0" />
 
--
 
   **Tulos:**
 
