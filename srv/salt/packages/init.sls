@@ -5,3 +5,4 @@ packages:
       - nmap
       - tree
       - cowsay
+      - php
