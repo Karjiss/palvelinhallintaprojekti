@@ -9,9 +9,19 @@ apache2:
 /var/www/html/static_vulnerable.html:
   file.managed:
     - source: "salt://apache2/static_vulnerable.html"
+/var/www/html/secret:
+  file.directory:
+    - user: root
+    - group: root
+    - mode: 755
+    - makedirs: True
+/var/www/html/secret/passwrds.txt:
+  file.managed:
+    - source: "salt://apache2/secret/passwrds.txt"
 apache2.service:
   service.running:
     - watch:
       - file: /var/www/html/index.html
       - file: /var/www/html/vulnerable.php
       - file: /var/www/html/static_vulnerable.html
+      - file: /var/www/html/secret/passwrds.txt
