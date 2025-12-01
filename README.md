@@ -1,6 +1,6 @@
 # HAP - Haavoittuva Automatisoitu Palvelin
 
-Projektin ideana oli luoda SaltStackillä automaattinen tila, mikä asentaa verkkopalvelimen ja tekee siihen muutoksia. Halusimme myös luoda erillisen verkkopalvelimen, joka on tarkoituksellisesti haavoittuva.
+Projektin ideana oli luoda SaltStackillä automaattinen tila, mikä asentaa verkkopalvelimen ja tekee siihen muutoksia. Haluttiin myös luoda erillinen verkkosivu, joka on tarkoituksellisesti erittäin haavoittuva.
 
 Loimme verkkopalvelimelle haavoittuvan sivun tekoälyn avulla. Haavoittuvuuksia pystyy hyödyntämään esimerkiksi Kali Linuxilla sen sisäänrakennetuilla työkaluilla.
 
