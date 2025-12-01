@@ -39,7 +39,7 @@ Aloitetaan kloonaamalla tämä Git-varasto komennolla:
 
     $ git clone https://github.com/Karjiss/palvelinhallintaprojekti.git
 
-Seuraavaksi kopioi Salt-hakemisto omaan ```/srv/salt``` hakemistoon:
+Seuraavaksi kopioi Salt-hakemisto Git-varastosta omaan paikalliseen ```/srv/salt``` hakemistoon:
 
     $ sudo cp -r ~/palvelinhallintaprojekti/srv/salt/* /srv/salt/
 
